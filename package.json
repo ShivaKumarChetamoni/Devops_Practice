@@ -4,8 +4,8 @@
   "description": "Blogapp",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mkdir -p reports && mocha --reporter mocha-junit-reporter --reporter-options mochaFile=reports/TEST-results.xml --exit"
   },
   "author": "Srineel Reddy",
   "license": "ISC",
@@ -17,5 +17,11 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.17.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "supertest": "^6.3.3",
+    "mocha-junit-reporter": "^2.0.0"
   }
 }
